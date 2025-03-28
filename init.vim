@@ -10,7 +10,7 @@ set softtabstop=4
 set expandtab
 set shiftwidth=4
 set autoindent
-set number
+set relativenumber
 set wildmode=longest,list
 
 set mouse=a
@@ -61,6 +61,7 @@ call plug#begin("~/.vim/plugged")
 call plug#end()
 
 
+
 " NERDTree 
 let NERDTreeShowHidden=1
 
@@ -103,7 +104,8 @@ endif
 "let g:airline_theme = 'edge'
 
 "colorscheme gruvbox
-colorscheme onedark
+"colorscheme onedark
+colorscheme dracula
 
 " Airline
 let g:airline#extensions#tabline#enabled = 1
@@ -152,3 +154,9 @@ cmap ftn FloatermNew
 cmap ftt FloatermToggle
 cmap ft1 FloatermFirst
 cmap ft2 FloatermLast
+
+
+"Tab navigation
+nnoremap <Tab> :bnext<CR>
+nnoremap <S-Tab> :bprevious<CR>
+
